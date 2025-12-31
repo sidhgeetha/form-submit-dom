@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width initial-scale=1.0">
+  <link href="/src/style.css" rel="stylesheet">
+
+  
+
+</head>
+<body>
+
+  <header class="bg-black flex justify-between items-center px-4 py-3 md:px-8 lg:px-12 w-full fixed top-0 left-0 z-50">
+    <!-- logo left -->
+     <!-- change font size with sm:, md:, lg:. -->
+
+    <div class="text-white">
+      <div class="font-sans text-xl font-extrabold md:text-2xl lg:text-3xl">logo </div>
+    </div>
+
+    
+
+    <!-- nav links -->
+     <!-- hidden md:flex hide for mobile and flex for md, lg screens -->
+
+    <nav class=" hidden text-white md:flex text-sm md:text-base lg:text-lg items-center justify-between space-x-6 p-4">
+
+     <a href="#" >Home</a>
+     <a href="#" >About</a>
+     <a href="#" >Services</a>
+     <a href="#" >Contact</a>
+
+    <a href="#" class="text-black bg-white px-4 py-2 rounded hover:bg-gray-200 font-medium">Login</a>
+
+    </nav>
+
+    <div class="md:hidden ">
+
+    
+
+    <input type="checkbox" id="menuToggle" class="peer hidden" >
+
+    <!-- mobiel hamburger menu for to show links on mobile screen -->
+     <!-- md:hidden only t hide icon on md + screen size -->
+
+     <label for="menuToggle" class=" cursor-pointer flex items-center justify-center relative z-50">
+      
+    <!-- peer-checked:hidden → hamburger icon disappears-->
+     <!-- peer-checked:block → close icon appears -->
+      <!-- peer-checked:flex → mobile menu appears -->
+
+    <svg class="block w-6 h-6 text-white peer-checked:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+    </svg>
+
+     <!-- Close Icon -->
+     <svg class="hidden peer-checked:block   w-6 h-6 text-white " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+  </svg>
+
+    
+
+   
+   </label>
+
+   
+
+    
+
+
+  
+
+   <!-- Mobile Menu -->
+<nav class="hidden peer-checked:flex flex-col absolute justify-center text-center top-full left-0 w-full bg-black text-white space-y-4 p-4 md:hidden">
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Contact</a>
+  <a href="#" class="text-black bg-white px-4 py-2 rounded hover:bg-gray-200 font-medium mx-auto">Login</a>
+</nav>
+
+</div>
+
+  </header>
+
+
+  <main class="my-5 pt-30">
+  
+    <div class="bg-white container mx-auto ">
+
+      <form id="myForm" action="">
+
+        <h3 id= "formHeading" class="font-bold text-xl mb-4 text-black" title="fill teh for with required details"> 
+          Please fill the food preferences for your child for evening club:
+        </h3>
+
+        <div class="space-y-3 border border-gray-600  rounded-md p-6">
+
+              <div>
+            <label for="studentName" class="block mb-3 font-medium text-md">Give name of student</label>
+
+             <input type="text" id="studentName" 
+               class="border border-gray-300 p-4 pr-10 w-full  rounded-sm " 
+               placeholder="give name"  required />
+      
+          </div>
+
+          <div>
+            <label for="studentClass" class="block mb-3 font-medium text-md">Select Classroom</label>
+            <select id="studentClass" class="border border-gray-300 p-4 pr-10 w-full  rounded-sm " required>
+              <option value="" > Select class</option>
+              <option value="Butterfly" >Butterfly</option>
+              <option value="Dragon" > Dragon</option>
+              <option value="Swan" > Swan</option>
+
+            </select>
+          </div>
+
+           <div>
+            <label for="studentYear" class="block mb-3 font-medium text-md">Select year</label>
+
+            <select id="studentYear" class="border border-gray-300 p-4 pr-10 w-full  rounded-sm " required >
+              <option value="" > Select year</option>
+              <option value="1">Y1</option>
+              <option value="2"> Y2</option>
+              <option value="3"> Y3</option>
+               <option value="4"> Y4</option>
+                <option value="5"> Y5</option>
+
+            </select>
+          </div>
+
+          
+          <div>
+            <label for="studentFood" class="block mb-3 font-medium text-md">Select food your kid would prefer to eat</label>
+
+            <select id="studentFood" class="border border-gray-300 p-4 pr-10 w-full  rounded-sm " required >
+              
+              <option value="" > Select food </option>
+              <option value="chicken">Chicken</option>
+              <option value="sandwich"> Sandwich</option>
+              <option value="vagetables"> Vegetables</option>
+               <option value="rice"> Rice</option>
+                <option value="potato"> Potato</option>
+
+            </select>
+            </div>
+
+               <div>
+              <label for="snacksCount" class="block mb-3 font-medium text-md" >How many snacks to be given to your child in day? </label>
+
+
+           
+
+               <input type="number" id="snacksCount" 
+               class="border border-gray-300 p-4 pr-10 w-full  rounded-sm " 
+               placeholder="choose snacks count per day" min="1" max="3" required />
+            </div>
+
+
+
+            <div>
+              <label for="foodOptions" class="block mb-3 font-medium text-md">Choose food options you prefer for your child to eat</label>
+
+
+              <select id="foodOptions" class="border border-gray-300 p-4 pr-10 w-full  rounded-sm " required >
+              <option value="" > Select food</option>
+              <option value="vag salad">Veg salad</option>
+              <option value="fruits"> Fruits</option>
+              <option value="rice"> Rice</option>
+              <option value="burger"> Burger</option>
+             
+
+              </select>
+            </div>
+
+            <div>
+              <label for="alergicTerms" class="block mb-3 font-medium text-md">Do you have any alergic problems?</label>
+
+
+              <select id="alergicTerms" class="border border-gray-300 p-4 pr-10 w-full  rounded-sm " required >
+              <option value="" > Allergitic concerns</option>
+              <option value="diary products">Diary products</option>
+              <option value="peanuts"> Peanuts</option>
+              <option value="read meat"> Red Meat</option>
+            
+
+                  </select>
+            </div>
+
+            <!-- submit button  -->
+          <div class="">
+            <button id="submit" type="submit" class="bg-blue-500 text-white text-xl font-bold px-6 py-2 rounded-md "> Submit</button>
+          </div>
+            
+          </div>
+            
+          
+
+        </div>
+
+      
+        
+      </form>
+
+        <!-- display dettails down -->
+        
+        <div class="container rounded-md mx-auto bg-white border border-gray-400 shadow-2xl mt-20 w-full h-full text-center text-2xl font-medium " 
+        id="mealContainer">
+          <h4 class="text-2xl font-medium mb-4 bg-blue-600 p-4 text-white">
+             Meal requirements – Year 4 students
+           </h4>
+
+            <!-- <div id="mealData" class="text-lg space-y-4 p-4"></div> -->
+             <!-- craetign table to display form data -->
+
+ <table id="mealTable" class="min-w-full border border-gray-300">
+    <thead class="bg-gray-100">
+      <tr>
+        <th class="border p-2">Student Name</th>
+        <th class="border p-2">Class</th>
+        <th class="border p-2">Year</th>
+        <th class="border p-2">Preferred Food</th>
+        <th class="border p-2">Snacks per Day</th>
+        <th class="border p-2">Food Options</th>
+        <th class="border p-2">Allergies</th>
+      </tr>
+    </thead>
+    <tbody id="mealTableBody" class="text-center">
+      
+    </tbody>
+  </table>
+        </div>
+      
+    </div>
+
+
+
+  </main>
+
+  <script src="./assets/js/main.js"></script>
+  </body>
+  </html>
